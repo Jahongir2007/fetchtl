@@ -20,11 +20,15 @@ Fetchtl allows you to fetch data and interact with your server using only HTML. 
 
 ---
 
-## Installation
+## Installation (for backend)
 
 ```bash
 # Using npm
 npm install fetchtl
+```
+## Importing (for frontend)
+```html
+<script src="https://cdn.jsdelivr.net/gh/jahongir2007/fetchtl/fetchtl.js"></script>
 ```
 ## Fetchtl Frontend API Guide
 
