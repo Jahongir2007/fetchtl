@@ -31,12 +31,12 @@ npm install fetchtl
 Fetchtl is a lightweight HTML-first library to fetch data from your server without writing frontend JavaScript. It uses custom HTML attributes (`$get`, `$post`, `$put`, `$delete`, `$patch`, `$poll`, `$realtime`) to handle HTTP requests, form submissions, polling, and real-time updates.
 
 ### Table of Contents
-[`$get`: Fetch and render]()
-[`$post`, `$put`, `$patch`, `$delete`: Forms]()
-[`$poll`: Automatic polling]()
-[`$realtime`: WebSocket updates]()
-[Template Variables]()
-[Form Validation]()
+ - [`$get`: Fetch and render]()
+ - [`$post`, `$put`, `$patch`, `$delete`: Forms]()
+ - [`$poll`: Automatic polling]()
+ - [`$realtime`: WebSocket updates]()
+ - [Template Variables]()
+ - [Form Validation]()
 
 
 ### `$get`: Fetch and render
