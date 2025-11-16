@@ -34,6 +34,7 @@ Fetchtl is a lightweight HTML-first library to fetch data from your server witho
 
 ### Table of Contents
 #### For frontend
+ - [`$url`: Set main server host and port]() 
  - [`$get`: Fetch and render](https://github.com/Jahongir2007/fetchtl/blob/main/README.md#get-fetch-and-render)
  - [`$post`, `$put`, `$patch`, `$delete`: Forms](https://github.com/Jahongir2007/fetchtl/blob/main/README.md#post-put-patch-delete-forms)
  - [`$poll`: Automatic polling](https://github.com/Jahongir2007/fetchtl/blob/main/README.md#poll-automatic-polling)
@@ -45,6 +46,11 @@ Fetchtl is a lightweight HTML-first library to fetch data from your server witho
  - [Reading and Writing Input Values](https://github.com/Jahongir2007/fetchtl/blob/main/README.md#reading-and-writing-input-values)
  - [Selectors](https://github.com/Jahongir2007/fetchtl/blob/main/README.md#selectors)
  - [Example Usage](https://github.com/Jahongir2007/fetchtl/blob/main/README.md#example-express--fetchtl-integration)
+
+### `$url`: Setting main server host and port
+```hmtl
+<html $url='http:\\localhost:3000'>
+```
 
 ### `$get`: Fetch and render
 Use `$get` on any HTML element to automatically fetch JSON from a URL and render it inside the element.
