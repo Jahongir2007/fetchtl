@@ -36,13 +36,13 @@ Fetchtl is a lightweight HTML-first library to fetch data from your server witho
 #### For frontend
  - [`$get`: Fetch and render](https://github.com/Jahongir2007/fetchtl/blob/main/README.md#get-fetch-and-render)
  - [`$post`, `$put`, `$patch`, `$delete`: Forms](https://github.com/Jahongir2007/fetchtl/blob/main/README.md#post-put-patch-delete-forms)
- - [`$poll`: Automatic polling](https://github.com/Jahongir2007/fetchtl/blob/main/README.md#realtime-websocket-updates))
+ - [`$poll`: Automatic polling](https://github.com/Jahongir2007/fetchtl/blob/main/README.md#poll-automatic-polling)
  - [`$realtime`: WebSocket updates](https://github.com/Jahongir2007/fetchtl/blob/main/README.md#realtime-websocket-updates)
- - [Template Variables]()
- - [Form Validation]()
+ - [Template Variables](https://github.com/Jahongir2007/fetchtl/blob/main/README.md#template-variables)
+ - [Form Validation](https://github.com/Jahongir2007/fetchtl/blob/main/README.md#form-validation)
 #### For backend
- - [Syncing Data]()
- - [Reading and Writing Input Values]()
+ - [Syncing Data](https://github.com/Jahongir2007/fetchtl/blob/main/README.md#syncing-reqbody-automatically)
+ - [Reading and Writing Input Values](https://github.com/Jahongir2007/fetchtl/blob/main/README.md#reading-and-writing-input-values)
  - [Selectors]()
  - [Example Usage]()
 
@@ -181,6 +181,14 @@ $.input("username").val("John");
  - **IDs** → single string
  - **Classes / Names** → arrays
  - Setting values updates the internal `$` store
+
+### Selectors
+| Selector Type | Example    | Returns / Updates     |
+| ------------- | ---------- | --------------------- |
+| ID            | `#age`     | Single value (string) |
+| Class         | `.email`   | Array of values       |
+| Name          | `username` | Array of values       |
+
 
 ### Example Express + Fetchtl Integration
 ```js
