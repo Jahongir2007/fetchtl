@@ -1,0 +1,38 @@
+{
+  "name": "fetchtl",
+  "version": "0.0.2",
+  "description": "HTML-first data fetching with zero JS, leveraging a revolutionary server-driven DOM.",
+  "homepage": "https://github.com/Jahongir2007/fetchtl#readme",
+  "bugs": {
+    "url": "https://github.com/Jahongir2007/fetchtl/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jahongir2007/fetchtl.git"
+  },
+  "license": "MIT",
+  "author": "Jahongir Sobirov",
+  "type": "commonjs",
+  "main": "index.js",
+  "keywords": [
+    "fetch",
+    "html",
+    "html-only",
+    "no-javascript",
+    "ajax",
+    "http",
+    "forms",
+    "polling",
+    "realtime",
+    "frontend",
+    "lightweight",
+    "tiny-library",
+    "server-driven-dom"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
