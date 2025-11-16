@@ -43,8 +43,8 @@ Fetchtl is a lightweight HTML-first library to fetch data from your server witho
 #### For backend
  - [Syncing Data](https://github.com/Jahongir2007/fetchtl/blob/main/README.md#syncing-reqbody-automatically)
  - [Reading and Writing Input Values](https://github.com/Jahongir2007/fetchtl/blob/main/README.md#reading-and-writing-input-values)
- - [Selectors]()
- - [Example Usage]()
+ - [Selectors](https://github.com/Jahongir2007/fetchtl/blob/main/README.md#selectors)
+ - [Example Usage](https://github.com/Jahongir2007/fetchtl/blob/main/README.md#example-express--fetchtl-integration)
 
 ### `$get`: Fetch and render
 Use `$get` on any HTML element to automatically fetch JSON from a URL and render it inside the element.
