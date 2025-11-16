@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>fetchtl — HTML-powered API Requests</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
+
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: radial-gradient(circle at top, #0a0a0a 20%, #000 80%);
+      color: #eaeaea;
+      overflow-x: hidden;
+    }
+
+    /* Floating glowing shapes */
+    .glow {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: #0070f3;
+      filter: blur(180px);
+      opacity: 0.25;
+      border-radius: 50%;
+      animation: float 12s ease-in-out infinite;
+      z-index: -1;
+    }
+    .glow2 {
+      position: absolute;
+      width: 350px;
+      height: 350px;
+      background: #00d4ff;
+      filter: blur(180px);
+      opacity: 0.18;
+      border-radius: 50%;
+      animation: float2 14s ease-in-out infinite;
+      z-index: -1;
+    }
+    @keyframes float {
+      0% { transform: translate(0,0); }
+      50% { transform: translate(40px, -60px); }
+      100% { transform: translate(0,0); }
+    }
+    @keyframes float2 {
+      0% { transform: translate(0,0); }
+      50% { transform: translate(-60px, 40px); }
+      100% { transform: translate(0,0); }
+    }
+
+    /* Animated hero */
+    .hero {
+      text-align: center;
+      padding: 130px 20px;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 4.5rem;
+      font-weight: 900;
+      background: linear-gradient(90deg,#fff,#5ab4ff,#0070f3);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shine 4s linear infinite;
+    }
+
+    @keyframes shine {
+      0% { filter: drop-shadow(0 0 5px #0070f3); }
+      50% { filter: drop-shadow(0 0 20px #00d4ff); }
+      100% { filter: drop-shadow(0 0 5px #0070f3); }
+    }
+
+    .subtitle {
+      font-size: 1.3rem;
+      max-width: 650px;
+      margin: 20px auto;
+      color: #bdbdbd;
+    }
+
+    /* Premium buttons */
+    .btn {
+      display: inline-block;
+      padding: 14px 30px;
+      border-radius: 14px;
+      background: linear-gradient(90deg,#0070f3,#00d4ff);
+      color: white;
+      font-size: 1.15rem;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 8px;
+      box-shadow: 0 8px 20px rgba(0,140,255,0.25);
+      backdrop-filter: blur(8px);
+      transition: 0.25s;
+    }
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(0,140,255,0.35);
+    }
+
+    .btn.secondary {
+      background: rgba(255,255,255,0.08);
+      border: 2px solid rgba(255,255,255,0.2);
+      color: #eaeaea;
+    }
+
+    /* Sections */
+    section {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      font-size: 2.4rem;
+      margin-bottom: 15px;
+      color: #fff;
+    }
+
+    /* Card styling */
+    .card {
+      background: rgba(255,255,255,0.05);
+      padding: 25px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 0 30px rgba(0,0,0,0.3);
+      margin-top: 20px;
+    }
+
+    pre {
+      background: #0f0f0f;
+      padding: 16px;
+      border-radius: 12px;
+      overflow-x: auto;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      margin-top: 70px;
+      color: #777;
+      background: #050505;
+    }
+  </style>
+</head>
+<body $url="http://localhost:3000">
+
+  <div class="glow" style="top: -80px; left: -80px"></div>
+  <div class="glow2" style="bottom: -60px; right: -40px"></div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <h1>fetchtl</h1>
+    <p class="subtitle">A futuristic HTML attribute engine that turns your HTML into a reactive API-powered UI — with zero JavaScript.</p>
+
+    <div class="btn-row">
+      <a href="https://github.com/jahongir2007/fetchtl" class="btn">GitHub →</a>
+      <a href="#install" class="btn secondary">Documentation</a>
+    </div>
+  </header>
+
+  <!-- Features -->
+  <!-- Features -->
+<section>
+  <h2>🚀 Features</h2>
+  <div class="card" style="display: flex; gap: 40px; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 280px;">
+      <h3>Frontend Features</h3>
+      <ul>
+        <li><code>$get</code> — load data from any API into HTML</li>
+        <li><code>$post / $put / $delete / $patch</code> — submit forms automatically</li>
+        <li><code>$poll</code> — auto-refresh sections</li>
+        <li><code>$realtime</code> — Server-Sent Events (SSE) support</li>
+        <li><code>$send-on</code> — trigger on click, input, submit</li>
+        <li><code>$single-fetch</code> — throttle repeated requests</li>
+        <li>Built-in template engine (e.g. <code>$name</code> → replaced by JSON value)</li>
+      </ul>
+    </div>
+    <div style="flex: 1; min-width: 280px;">
+      <h3>Backend Features</h3>
+      <ul>
+        <li><code>$.sync(req.body)</code> —  syncing <code>req.body</code> for making backend DOM</li>
+        <li><code>$.input("#age").val()</code> —  getting value by ID in backend after sending with <code>$post/$put/$delete/$patch</code></li>
+        <li><code>$.input(".email").val()</code> —  getting value by class in backend after sending with <code>$post/$put/$delete/$patch</code></li>
+        <li><code>$.input("username").val()</code> —  getting value by name in backend after sending with <code>$post/$put/$delete/$patch</code></li>
+        <li><code>$.input("#age").val(18)</code> —  setting data</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+  <!-- Install -->
+  <section id="install">
+    <h2>📦 Install</h2>
+    <div class="card">
+      <pre><code class="language-bash">npm install fetchtl</code></pre>
+
+      <p>For frontend:</p>
+      <pre><code class="language-html">&lt;script src="https://cdn.jsdelivr.net/gh/jahongir2007/fetchtl/fetchtl.js"&gt;&lt;/script&gt;</code></pre>
+    </div>
+  </section>
+
+  <!-- Demo -->
+  <section>
+    <h2>🧪 Live Demo</h2>
+    <p>This box updates every second using <code>$poll</code>.</p>
+
+    <div id="timeBox" class="card"
+      $get="/api/time"
+      $poll="1000">
+      Current time: $time
+    </div>
+  </section>
+
+  <!-- Example Code -->
+  <section>
+    <h2>💡 Example Usage</h2>
+    <div class="card">
+<pre><code class="language-html">&lt;form $post="/api/login" $send-on="submit" $single-fetch="true" $reload="false"&gt;
+  &lt;input name="email" placeholder="Email" /&gt;
+  &lt;input name="password" type="password" placeholder="Password" /&gt;
+  &lt;button type="submit"&gt;Login&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+    </div>
+  </section>
+
+  <footer>
+    Built by Jahongir Sobirov • fetchtl © 2025
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <script src="https://cdn.jsdelivr.net/gh/jahongir2007/fetchtl/fetchtl.js"></script>
+</body>
+</html>
