@@ -142,7 +142,7 @@ app.use(express.json()); // parse JSON bodies
 ```
 
 ### Syncing `req.body` Automatically
-In your route handlers, just call `$.sync(req.body)`:
+In your route handlers, just call `$.sync(req.body)` (for syncing you should send data with `$post/$patch/$put/$delete`):
 ```js
 app.post("/submit", (req, res) => {
   // Sync all form data into $
