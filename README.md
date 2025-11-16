@@ -34,7 +34,7 @@ Fetchtl is a lightweight HTML-first library to fetch data from your server witho
 
 ### Table of Contents
 #### For frontend
- - [`$url`: Set main server host and port]() 
+ - [`$url`: Set main server host and port](https://github.com/Jahongir2007/fetchtl/blob/main/README.md#url-setting-main-server-host-and-port) 
  - [`$get`: Fetch and render](https://github.com/Jahongir2007/fetchtl/blob/main/README.md#get-fetch-and-render)
  - [`$post`, `$put`, `$patch`, `$delete`: Forms](https://github.com/Jahongir2007/fetchtl/blob/main/README.md#post-put-patch-delete-forms)
  - [`$poll`: Automatic polling](https://github.com/Jahongir2007/fetchtl/blob/main/README.md#poll-automatic-polling)
