@@ -1,6 +1,6 @@
 // fetchtl.js
 // Author: Jahongir Sobirov (c) 2025
-// Version: 0.0.1
+// Version: 0.0.2
 // Description: Tiny library to send GET and POST requests using HTML attributes ($get, $post)
 // License: MIT
 
@@ -273,6 +273,13 @@ static async handlePatch() {
 
         // Emit success event
         form.dispatchEvent(new CustomEvent("fetchtl:success", { detail: data }));
+
+        // --- Redirect on success
+        const redirectUrl = form.getAttribute("$redirect");
+        if (redirectUrl) {
+          const finalUrl = redirectUrl.startsWith("/") ? this.baseURL + redirectUrl : redirectUrl;
+          window.location.href = finalUrl;
+        }
 
         console.log("Sent JSON:", data);
       } catch (err) {
